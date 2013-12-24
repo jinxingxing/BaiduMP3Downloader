@@ -3,7 +3,7 @@ baiduMp3Download
 
 根据关键字自动搜索百度音乐下载mp3，添加cookie后可下载320kps的mp3文件
 
-Usage: downloadMP3-baidu.py <song list file> <cookie file> 
+Usage: downloadMP3-baidu.py {song list file} [cookie file]
 
 
 song list file 默认读取 ./download.txt
