@@ -1,6 +1,18 @@
 #!/usr/bin/env python2
 #coding:utf8
+"""
+Usage: downloadMP3-baidu.py <song list file> <cookie file> 
 
+#######
+song list file 默认读取 ./download.txt
+cookie file 默认读取 ./cookie.txt
+
+#######
+cookie file 格式： 登陆百度音乐后，把 cookie 直接复制到文件里保存即可
+
+#######
+没有 cookie 也可正常下载，但只能下载较低码率的音频
+"""
 import sys,os,time
 import re
 import urllib, urllib2
@@ -150,6 +162,7 @@ def main():
             #import traceback
             #traceback.print_exc()
             fail_list.append(line)
+            print e
             print line, "download fail"
     print u"\n%s\n失败列表:\n%s\n" % ("#"*60,"\n".join(fail_list))
     
